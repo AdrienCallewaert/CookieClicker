@@ -1,3 +1,24 @@
+@import url(https://fonts.googleapis.com/css2?family=Sedgwick+Ave&display=swap);
+
+@import url(https://fonts.googleapis.com/css2?family=Mali&display=swap);
+
+
 #clicks:active {
     transform: scale(1.2);
   }
+
+/* background */
+body {
+  background-image:url(https://nsa40.casimages.com/img/2021/02/22/210222040900797055.png);
+  height: 100%; 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* texte */
+#stat {
+	font-family: 'Sedgwick Ave', 'cursive';
+  font-size: 2.0em;
+
+}
