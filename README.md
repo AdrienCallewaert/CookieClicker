@@ -31,11 +31,11 @@ créer un cookie clicker, vous pouvez mettre en œuvre ce que vous voulez.
 Dans le HTML, mettez un bouton * clic * qui incrémentera un compteur et une étiquette
 initialisé à * 0 * pour afficher ledit compteur.
 
-- **Étape2 **: préparer le JavaScript
+- **Étape2**: préparer le JavaScript
 Dans votre JavaScript, préparez des variables pour vous permettre de contrôler votre bouton et
 étiqueter. Vous aurez également besoin d'une variable pour suivre le score.
 
-- **Étape3 **: augmenter le score
+- **Étape3**: augmenter le score
 Lorsque vous cliquez sur le bouton, augmentez la variable stockant le score de * 1 *, puis
 afficher le score actuel à l'intérieur de l'étiquette.
 
