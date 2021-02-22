@@ -4,7 +4,10 @@ let score = 0;
 let autoC;
 let clique;
 
-
+document.querySelector('#clicks').addEventListener('click',()=>{
+    score++;
+    document.getElementById("clicks").textContent = score;
+})
 
 
 
