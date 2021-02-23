@@ -44,3 +44,8 @@ section img {
   height: 100%;
   object-fit: cover;
 }
+
+
+img[src="asset/img/spaceship.png"] {
+  display:none;
+}
