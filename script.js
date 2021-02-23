@@ -82,3 +82,6 @@ document.getElementById("planète").addEventListener("click", () => {
         alert("insufficient sold")
     }
 });
+
+
+setTimeout(() => {let damage = setInterval(() => {score -= 1}, 500);}, randNumber);
