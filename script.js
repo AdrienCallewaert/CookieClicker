@@ -1,5 +1,6 @@
 //idée -- ajout event guerre aléatoire une fois 2 planètes acquis -- ajout event invasion extraterreste
 
+let valueClick = 1;
 let score = 0;
 let priceM = 100;
 let priceA = 400;
@@ -11,6 +12,44 @@ let fac1 = 0;
 let fac2 = 0;
 let fac3 = 0; 
 let fac4 = 0;
+
+
+let event = ["x2", "+1000 habitants","+100 habitants", "+ 10% production habitant","maladie","x5 pendant une minute"];
+let eventselec = Math.floor(Math.random()* event.length);
+
+
+switch(eventselec){
+    case 0 : valueClick = valueClick*2;
+    break;
+
+    case 1 : score = score + 1000;
+    break;
+
+    case 2 : score = score + 100;
+    break;
+
+    case 3 : valueClick = valueClick + ((valueClick/100)*10);
+    break;
+
+    case 4 : score = score - ((valueClick/100)*10);
+    break;
+
+    case 5 : fac1 = fac1*5;
+             fac2 = fac2*5;
+             fac3 = fac3*5;
+             fac4 = fac4*5;
+    break;
+
+}
+
+//Math.floor(Math.random()*(300000-60000)-60000);
+
+
+
+
+
+
+
 
 document.getElementById("cookiesActif").innerHTML = "Cookies : " + score
 
@@ -24,7 +63,7 @@ function perSeconde(range){
 
 
 document.getElementById("clicks").addEventListener("click", () => { 
-    score += 1;
+    score += valueClick;
     document.getElementById("cookiesActif").innerHTML = "Cookies : " + score
     console.log(score);
 })
