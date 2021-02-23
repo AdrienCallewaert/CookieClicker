@@ -6,57 +6,69 @@ let priceM = 100;
 let priceA = 400;
 let priceV = 600;
 let priceP = 1000;
-let timeEvent = Math.floor(Math.random()*(300000-60000)-60000);
+let eventTime = 5000 /*Math.floor(Math.random()*(300000-60000)-60000);*/
 
 
 let fac1 = 0;
 let fac2 = 0;
 let fac3 = 0; 
 let fac4 = 0;
-let i = 0;
+
 
 function eventRand() {
 
+/*timeEvent = Math.floor(Math.random()*(300000-60000)-60000);*/
 let event = ["x2", "+1000 habitants","+100 habitants", "+ 10% production habitant","maladie","x5 pendant une minute"];
-let eventselec = 5 /*Math.floor(Math.random()* event.length);*/
-i ++;
+let eventSelec = Math.floor(Math.random()*(event.length-0)-0); 
+console.log(eventSelec)
+
 
 
 switch(eventselec){
     case 0 : valueClick = valueClick*2;
-             alert("eventgood")
+    alert("test")
     break;
 
-    case 1 : score = score + 1000;
-    alert("eventgood")
+    case 1 : score += 1000;
+    alert("test")
+
     break;
 
-    case 2 : score = score + 100;
-    alert("eventgood")
+    case 2 : score += 100;
+    alert("test")
+    
     break;
 
     case 3 : valueClick = valueClick + (Math.floor((valueClick/100)*10));
-    alert("eventgood")
+    alert("test")
+    
     break;
 
     case 4 : score = score - (Math.floor((valueClick/100)*10));
-    alert("eventgood")
+    alert("test")
+    
     break;
 
     case 5 : fac1 = fac1*5;
              fac2 = fac2*5;
              fac3 = fac3*5;
              fac4 = fac4*5;
-             setTimeout(())
-             alert("eventgood")
+             alert("test")
+             setTimeout(() => {
+                fac1 = fac1/5;
+                fac2 = fac2/5;
+                fac3 = fac3/5;
+                fac4 = fac4/5;
+                alert("test2")
+             }, 600000)
     break;
 }
+
+setTimeout(eventRand, 10000/*Math.floor(Math.random()*(300000-60000)-60000)*/)
+
 }
 
-
-let displayEvent = setTimeout(eventRand, 5000)
-if (i == 10000){
-clearTimeout(displayEvent)}
+let displayEvent = setTimeout(eventRand, eventTime);
 
 
 
