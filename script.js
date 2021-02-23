@@ -1,6 +1,6 @@
 //idée -- ajout event guerre aléatoire une fois 2 planètes acquis -- ajout event invasion extraterreste
 
-let score = 0;
+let score = 95;
 let priceM = 100;
 let priceA = 400;
 let priceV = 600;
@@ -15,14 +15,15 @@ let totalFac = fac1 + fac2 + fac3 + fac4
 
 function perSeconde(range){
     score += range;
-     
-     document.getElementById("").innerHTML = score //affichage
+    document.getElementById("cookiesActif").innerHTML = "Cookies : " + score
+    document.getElementById("cookiesPerSec").innerHTML = "CPS : " + totalFac
 }
 
 
 
 document.getElementById("clicks").addEventListener("click", () => { 
     score += 1;
+    document.getElementById("cookiesActif").innerHTML = "Cookies : " + score
     console.log(score);
 })
 
@@ -32,7 +33,7 @@ document.getElementById("maison").addEventListener("click",()=>{
         score = score - 100;
         fac1 += 1;
         priceM += (Math.floor(priceM/100*15))
-
+        document.getElementById("cookiesActif").innerHTML = "Cookies : " + score
         setInterval(perSeconde, 1000,fac1);
     }
     else{
@@ -46,6 +47,7 @@ document.getElementById("appartement").addEventListener("click", () => {
         score = score - 400;
         fac2 += 10;
         priceA += (Math.floor(priceA/100*15))
+        document.getElementById("cookiesActif").innerHTML = "Cookies : " + score
         setInterval(perSeconde, 1000, fac2);
     }
     else{
@@ -54,11 +56,11 @@ document.getElementById("appartement").addEventListener("click", () => {
 });
 
 document.getElementById("ville").addEventListener("click", () => { 
-    let price = 600;
     if (score > priceV) {
         score = score - 600;
         fac3 += 100;
         priceV += (Math.floor(priceV/100*15))
+        document.getElementById("cookiesActif").innerHTML = "Cookies : " + score
         setInterval(perSeconde, 1000, fac3);
     }
     else{
@@ -71,6 +73,7 @@ document.getElementById("planète").addEventListener("click", () => {
         score = score - 1000;
         fac4 += 1000;
         priceP += (Math.floor(priceP/100*15))
+        document.getElementById("cookiesActif").innerHTML = "Cookies : " + score
         setInterval(perSeconde, 1000, fac4);
     }
     else{
