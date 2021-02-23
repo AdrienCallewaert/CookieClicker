@@ -1,0 +1,46 @@
+@import url(https://fonts.googleapis.com/css2?family=Sedgwick+Ave&display=swap);
+
+
+#clicks:active {
+    transform: scale(1.2);
+  }
+
+/* background */
+body {
+  background-image:url(https://nsa40.casimages.com/img/2021/02/23/210223020347565365.png);
+  height: 100%; 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* texte */
+#stat {
+	font-family: 'Sedgwick Ave', 'cursive';
+  font-size: 2.0em;
+
+}
+
+section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section h2 {
+  position: relative;
+  width: 400px;
+  height: 400px;
+}
+
+section img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
