@@ -1,6 +1,6 @@
 //idée -- ajout event guerre aléatoire une fois 2 planètes acquis -- ajout event invasion extraterreste
 
-let score = 95;
+let score = 0;
 let priceM = 100;
 let priceA = 400;
 let priceV = 600;
@@ -11,14 +11,16 @@ let fac1 = 0;
 let fac2 = 0;
 let fac3 = 0; 
 let fac4 = 0;
-let totalFac = fac1 + fac2 + fac3 + fac4
+
+document.getElementById("cookiesActif").innerHTML = "Cookies : " + score
+
 
 function perSeconde(range){
     score += range;
+    let totalFac = fac1 + fac2 + fac3 + fac4
     document.getElementById("cookiesActif").innerHTML = "Cookies : " + score
     document.getElementById("cookiesPerSec").innerHTML = "CPS : " + totalFac
 }
-
 
 
 document.getElementById("clicks").addEventListener("click", () => { 
