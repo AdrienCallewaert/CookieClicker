@@ -21,6 +21,9 @@ document.getElementById("maison").disabled = true;
 document.getElementById("appartement").disabled = true;
 document.getElementById("ville").disabled = true;
 document.getElementById("planète").disabled = true;
+document.getElementById("katyperry").disabled = true;
+document.getElementById("billgates").disabled = true;
+document.getElementById("elonmusk").disabled = true;
 
 
 document.getElementById("cookiesActif").innerHTML = "People : " + score
@@ -107,7 +110,7 @@ function perSeconde(range){
     score += range;
     let totalFac = fac1 + fac2 + fac3 + fac4;
     document.getElementById("cookiesActif").innerHTML = "People : " + score;
-    document.getElementById("cookiesPerSec").innerHTML = "PPS : " + totalFac;
+    document.getElementById("cookiesPerSec").innerHTML = "OFFspring: " + totalFac;
     disable()
     
 }
