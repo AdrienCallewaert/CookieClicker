@@ -1,7 +1,7 @@
 //idée -- ajout event guerre aléatoire une fois 2 planètes acquis -- ajout event invasion extraterreste
 
 let valueClick = 1;
-let score = 95;
+let score = 0;
 let priceM = 100;
 let priceA = 400;
 let priceV = 600;
@@ -39,51 +39,56 @@ img.src = "https://nsa40.casimages.com/img/2021/02/24/210224104508999300.png";
 document.getElementById("clicksbonus").addEventListener("click", () =>{
 
 
-let event = ["x2", "+1000 habitants","+100 habitants", "+ 10% production habitant","maladie","x5 pendant une minute"];
-let eventSelec = Math.floor(Math.random()*event.length); 
-
-
+let event = ["people by clic x2", "+1000 people","+100 people", "+ 10% people production","pandemia","x5 for 1 minute"];
+let eventSelec = Math.floor(Math.random()*event.length);
 
 switch(eventSelec){
     case 0 : valueClick = valueClick*2;
-    alert("test")
+    document.getElementById("div1").style.visibility = "visible";
+    document.getElementById("div1").innerHTML = "Activated bonus : "+ event[eventSelec];
     break;
 
     case 1 : score += 1000;
-    alert("test")
+    document.getElementById("div1").style.visibility = "visible";
+    document.getElementById("div1").innerHTML = "Activated bonus : "+ event[eventSelec];
 
     break;
 
     case 2 : score += 100;
-    alert("test")
+    document.getElementById("div1").style.visibility = "visible";
+    document.getElementById("div1").innerHTML = "Activated bonus : "+ event[eventSelec];
     
     break;
 
     case 3 : valueClick = valueClick + (Math.floor((valueClick/100)*10));
-    alert("test")
+    document.getElementById("div1").style.visibility = "visible";
+    document.getElementById("div1").innerHTML = "Activated bonus : "+ event[eventSelec];
     
     break;
 
     case 4 : score = score - (Math.floor((valueClick/100)*10));
-    alert("test")
-    
+    document.getElementById("div1").style.visibility = "visible";
+    document.getElementById("div1").innerHTML = "Activated bonus : "+ event[eventSelec];
     break;
 
     case 5 : fac1 = fac1*5;
              fac2 = fac2*5;
              fac3 = fac3*5;
              fac4 = fac4*5;
-             alert("test")
+             document.getElementById("div1").style.visibility = "visible";
+             document.getElementById("div1").innerHTML = "Activated bonus : "+ event[eventSelec];
              setTimeout(() => {
                 fac1 = fac1/5;
                 fac2 = fac2/5;
                 fac3 = fac3/5;
                 fac4 = fac4/5;
-                alert("test2")
+                document.getElementById("div1").style.visibility = "hidden";
              }, 600000)
+             
     break;
     }
     img.src = "https://nsa40.casimages.com/img/2021/02/24/210224113113164181.png";
+    document.getElementById("div1").style.visibility = "hidden";
 });
     setTimeout(eventRand, Math.floor(Math.random()*(300000-60000)+60000))
     
