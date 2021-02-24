@@ -5,6 +5,10 @@
     transform: scale(1.2);
   }
 
+#clicksbonus:active {
+  transform: scale(1.2);
+}
+
 /* background */
 body {
   background-image:url(https://nsa40.casimages.com/img/2021/02/23/210223020347565365.png);
@@ -46,10 +50,16 @@ section {
   justify-content: center;
   align-items: center;
 }
+
 section h2 {
   position: relative;
   width: 400px;
   height: 400px;
+}
+section h3 {
+  position: relative;
+  width: 170px;
+  height: 170px;
 }
 
 section img {
@@ -60,14 +70,6 @@ section img {
   height: 100%;
   object-fit: cover;
 }
-
-
-img[src="asset/img/spaceship.png"] {
-  display:none;
-}
-
-
-
 
 button{
 	font-family: 'Sedgwick Ave', 'cursive';

@@ -75,20 +75,20 @@ let displayEvent = setTimeout(eventRand, eventTime);
 
 
 
-document.getElementById("cookiesActif").innerHTML = "Cookies : " + score
+document.getElementById("cookiesActif").innerHTML = "People : " + score
 
 
 function perSeconde(range){
     score += range;
     let totalFac = fac1 + fac2 + fac3 + fac4
-    document.getElementById("cookiesActif").innerHTML = "Cookies : " + score
+    document.getElementById("cookiesActif").innerHTML = "People : " + score
     document.getElementById("cookiesPerSec").innerHTML = "CPS : " + totalFac
 }
 
 
 document.getElementById("clicks").addEventListener("click", () => { 
     score += valueClick;
-    document.getElementById("cookiesActif").innerHTML = "Cookies : " + score
+    document.getElementById("cookiesActif").innerHTML = "People : " + score
     console.log(score);
 })
 
@@ -98,7 +98,7 @@ document.getElementById("maison").addEventListener("click",()=>{
         score -= priceM;
         fac1 += 1;
         priceM += (Math.floor(priceM/100*15))
-        document.getElementById("cookiesActif").innerHTML = "Cookies : " + score
+        document.getElementById("cookiesActif").innerHTML = "People : " + score
         setInterval(perSeconde, 1000,fac1);
     }
     else{
@@ -112,7 +112,7 @@ document.getElementById("appartement").addEventListener("click", () => {
         score -= priceA;
         fac2 += 10;
         priceA += (Math.floor(priceA/100*15))
-        document.getElementById("cookiesActif").innerHTML = "Cookies : " + score
+        document.getElementById("cookiesActif").innerHTML = "People : " + score
         setInterval(perSeconde, 1000, fac2);
     }
     else{
@@ -125,7 +125,7 @@ document.getElementById("ville").addEventListener("click", () => {
         score -= priceV;
         fac3 += 100;
         priceV += (Math.floor(priceV/100*15))
-        document.getElementById("cookiesActif").innerHTML = "Cookies : " + score
+        document.getElementById("cookiesActif").innerHTML = "People : " + score
         setInterval(perSeconde, 1000, fac3);
     }
     else{
@@ -138,7 +138,7 @@ document.getElementById("planète").addEventListener("click", () => {
         score -= priceP;
         fac4 += 1000;
         priceP += (Math.floor(priceP/100*15))
-        document.getElementById("cookiesActif").innerHTML = "Cookies : " + score
+        document.getElementById("cookiesActif").innerHTML = "People : " + score
         setInterval(perSeconde, 1000, fac4);
     }
     else{
