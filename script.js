@@ -1,7 +1,7 @@
 //idée -- ajout event guerre aléatoire une fois 2 planètes acquis -- ajout event invasion extraterreste
 
 let valueClick = 1;
-let score = 0;
+let score = 95;
 let priceM = 100;
 let priceA = 400;
 let priceV = 600;
@@ -9,12 +9,13 @@ let priceP = 1000;
 let priceKP = 150;
 let priceBG ;
 let eventTime = Math.floor(Math.random()*(300000-60000)-60000);
-
+let bool = true;
 
 let fac1 = 0;
 let fac2 = 0;
 let fac3 = 0; 
 let fac4 = 0;
+
 
 
 function eventRand() {
@@ -65,61 +66,58 @@ switch(eventSelec){
 }
 
 setTimeout(eventRand, Math.floor(Math.random()*(300000-60000)-60000))
-
 }
 
 let displayEvent = setTimeout(eventRand, eventTime);
 
-
-
-//desactiver bouton boost cps
-/*if (score < 1000){
-    document.getElementById("planète").disabled = true;
-}
-else{
-    document.getElementById("planète").disabled = false;
-}    
-
-    if(score<600){
-        document.getElementById("ville").disabled = true;
-
-    }    
-        if (score<400){
-            document.getElementById("appartement").disabled = true;
-
-        }
-            if (score<100){
-                document.getElementById("maison").disabled = true;
-            }
-            else{
-                document.getElementById("maison").disabled = false;
-            }*/
-//desactiver bouton boost clic
-
-
 document.getElementById("maison").disabled = true;
-
-
-
-
+document.getElementById("appartement").disabled = true;
+document.getElementById("ville").disabled = true;
+document.getElementById("planète").disabled = true;
 
 
 document.getElementById("cookiesActif").innerHTML = "Cookies : " + score
 
+function disable() {    
+
+    if (score >= priceM){
+        document.getElementById("maison").disabled = false;
+    }
+    if (score >= priceA){
+        document.getElementById("appartement").disabled = false;
+    }
+    if (score >= priceV){
+        document.getElementById("ville").disabled = false;
+    }
+    if (score >= priceP){
+        document.getElementById("planète").disabled = false;
+    }
+    if (score >= priceK){
+        document.getElementById("KatyPerry").disabled = false;
+    }
+    if (score >= priceB){
+        document.getElementById("BillGates").disabled = false;
+    }
+    if (score >= priceE){
+        document.getElementById("ElonMusk").disabled = false;
+    }
+}
 
 function perSeconde(range){
     score += range;
-    let totalFac = fac1 + fac2 + fac3 + fac4
-    document.getElementById("cookiesActif").innerHTML = "Cookies : " + score
-    document.getElementById("cookiesPerSec").innerHTML = "CPS : " + totalFac
+    let totalFac = fac1 + fac2 + fac3 + fac4;
+    document.getElementById("cookiesActif").innerHTML = "Cookies : " + score;
+    document.getElementById("cookiesPerSec").innerHTML = "CPS : " + totalFac;
+    disable()
+    
 }
 
 
 document.getElementById("clicks").addEventListener("click", () => { 
     score += valueClick;
     document.getElementById("cookiesActif").innerHTML = "Cookies : " + score
-    console.log(score);
-})
+    disable()
+})  
 
 
 document.getElementById("maison").addEventListener("click",()=>{
