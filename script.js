@@ -6,7 +6,7 @@ let priceM = 100;
 let priceA = 400;
 let priceV = 600;
 let priceP = 1000;
-let eventTime = 5000 /*Math.floor(Math.random()*(300000-60000)-60000);*/
+let eventTime = Math.floor(Math.random()*(300000-60000)-60000);
 
 
 let fac1 = 0;
@@ -17,14 +17,12 @@ let fac4 = 0;
 
 function eventRand() {
 
-/*timeEvent = Math.floor(Math.random()*(300000-60000)-60000);*/
 let event = ["x2", "+1000 habitants","+100 habitants", "+ 10% production habitant","maladie","x5 pendant une minute"];
-let eventSelec = Math.floor(Math.random()*(event.length-0)-0); 
-console.log(eventSelec)
+let eventSelec = Math.floor(Math.random()*event.length); 
 
 
 
-switch(eventselec){
+switch(eventSelec){
     case 0 : valueClick = valueClick*2;
     alert("test")
     break;
@@ -64,7 +62,7 @@ switch(eventselec){
     break;
 }
 
-setTimeout(eventRand, 10000/*Math.floor(Math.random()*(300000-60000)-60000)*/)
+setTimeout(eventRand, Math.floor(Math.random()*(300000-60000)-60000))
 
 }
 
@@ -97,7 +95,7 @@ document.getElementById("clicks").addEventListener("click", () => {
 
 document.getElementById("maison").addEventListener("click",()=>{
     if (score >= priceM) {
-        score = score - 100;
+        score -= priceM;
         fac1 += 1;
         priceM += (Math.floor(priceM/100*15))
         document.getElementById("cookiesActif").innerHTML = "Cookies : " + score
@@ -111,7 +109,7 @@ document.getElementById("maison").addEventListener("click",()=>{
 
 document.getElementById("appartement").addEventListener("click", () => { 
     if (score > priceA) {
-        score = score - 400;
+        score -= priceA;
         fac2 += 10;
         priceA += (Math.floor(priceA/100*15))
         document.getElementById("cookiesActif").innerHTML = "Cookies : " + score
@@ -124,7 +122,7 @@ document.getElementById("appartement").addEventListener("click", () => {
 
 document.getElementById("ville").addEventListener("click", () => { 
     if (score > priceV) {
-        score = score - 600;
+        score -= priceV;
         fac3 += 100;
         priceV += (Math.floor(priceV/100*15))
         document.getElementById("cookiesActif").innerHTML = "Cookies : " + score
@@ -137,7 +135,7 @@ document.getElementById("ville").addEventListener("click", () => {
 
 document.getElementById("planète").addEventListener("click", () => { 
     if (score > priceP) {
-        score = score - 1000;
+        score -= priceP;
         fac4 += 1000;
         priceP += (Math.floor(priceP/100*15))
         document.getElementById("cookiesActif").innerHTML = "Cookies : " + score
@@ -148,5 +146,36 @@ document.getElementById("planète").addEventListener("click", () => {
     }
 });
 
+document.getElementById("").addEventListener("click",()=>{
+    if (score >= price) {
+        score -= price;
+        valueClick += 1;
+        price += (Math.floor(priceM/100*15))
+    }
+    else{
+        alert("insufficient sold")
+    }
+});
 
-setTimeout(() => {let damage = setInterval(() => {score -= 1}, 500);}, randNumber);
+document.getElementById("").addEventListener("click",()=>{
+    if (score >= price) {
+        score -= price;
+        valueClick += 1;
+        price += (Math.floor(priceM/100*15))
+    }
+    else{
+        alert("insufficient sold")
+    }
+});
+
+document.getElementById("").addEventListener("click",()=>{
+    if (score >= price) {
+        score -= price;
+        valueClick += 1;
+        price += (Math.floor(priceM/100*15))
+    }
+    else{
+        alert("insufficient sold")
+    }
+});
+
