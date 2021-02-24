@@ -23,24 +23,23 @@ body {
   text-align: center;
 	font-family: 'Sedgwick Ave', 'cursive';
   margin-top: 10px;
-
 }
 
-
+/* texte */
 #cookiesActif{
   color: #fff;
   font-size:3em;
 	font-family: 'Sedgwick Ave', 'cursive';
-
 }
 
-
+/* texte */
 #cookiesPerSec{
   color: #fff;
   font-size:1.5em;
 	font-family: 'Sedgwick Ave', 'cursive';
-
 }
+
+/* position general */
 section {
   position: relative;
   width: 100%;
@@ -51,17 +50,21 @@ section {
   align-items: center;
 }
 
+/* position Earth */
 section h2 {
   position: relative;
   width: 18em;
   height: 18em;
 }
+
+/* position moon & spaceship */
 section h3 {
   position: relative;
   width: 10em;
   height: 10em;
 }
 
+/* position image */
 section img {
   position: absolute;
   top: 0;
@@ -71,6 +74,7 @@ section img {
   object-fit: cover;
 }
 
+/* fonction bouton start */
 button{
 	font-family: 'Sedgwick Ave', 'cursive';
   margin: 10px;
@@ -107,4 +111,15 @@ button:active{
     4px 4px 0 0 #581845,
     5px 5px 0 0 #581845;
 }
+/* fonction bouton end */
 
+/* reglage psodo footer */
+h4 {
+  font-family: 'Sedgwick Ave', 'cursive';
+  font-size:1em;
+  font-weight:300;
+  color: #fff;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
