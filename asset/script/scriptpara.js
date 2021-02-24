@@ -1,3 +1,5 @@
+// fonction mousemove
+
 document.addEventListener("mousemove" , parallax);
             function parallax(e){
                 this.querySelectorAll('.layer').forEach(layer => {
@@ -10,3 +12,21 @@ document.addEventListener("mousemove" , parallax);
                     
                 })
             }
+
+
+
+// fonction pour afficher le bonus         
+function showDiv1() {
+            document.getElementById("div1").style.visibility = "visible";
+            }
+            setTimeout("showDiv1()", 15000); // aprés 15 sec
+
+
+
+// fonction pour masqué le bonus
+function displayokDiv1() {
+            document.getElementById("div1").style.visibility = "hidden";
+            }
+            setTimeout("displayokDiv1()", 30000); // aprés 30 sec
+    
+
