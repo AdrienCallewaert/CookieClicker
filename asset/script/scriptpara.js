@@ -16,10 +16,10 @@ document.addEventListener("mousemove" , parallax);
 
 
 // fonction pour afficher le bonus         
-function showDiv1() {
+/*function showDiv1() {
             document.getElementById("div1").style.visibility = "visible";
             }
-            setTimeout("showDiv1()", 15000); // aprés 15 sec
+            setTimeout("showDiv1()", 15000);*/ // aprés 15 sec
 
 
 
