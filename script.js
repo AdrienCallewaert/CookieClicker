@@ -7,23 +7,28 @@ let priceA = 400;
 let priceV = 600;
 let priceP = 1000;
 let priceKP = 150;
-let priceBG ;
+let priceBG = 300;
+let priceEM = 800;
 let eventTime = Math.floor(Math.random()*(300000-60000)-60000);
-let bool = true;
+
 
 let fac1 = 0;
 let fac2 = 0;
 let fac3 = 0; 
 let fac4 = 0;
 
+document.getElementById("maison").disabled = true;
+document.getElementById("appartement").disabled = true;
+document.getElementById("ville").disabled = true;
+document.getElementById("planète").disabled = true;
 
+
+document.getElementById("cookiesActif").innerHTML = "Cookies : " + score
 
 function eventRand() {
 
 let event = ["x2", "+1000 habitants","+100 habitants", "+ 10% production habitant","maladie","x5 pendant une minute"];
 let eventSelec = Math.floor(Math.random()*event.length); 
-
-
 
 switch(eventSelec){
     case 0 : valueClick = valueClick*2;
@@ -63,22 +68,17 @@ switch(eventSelec){
                 alert("test2")
              }, 600000)
     break;
+    }
+
+    setTimeout(eventRand, Math.floor(Math.random()*(300000-60000)-60000))
 }
 
-setTimeout(eventRand, Math.floor(Math.random()*(300000-60000)-60000))
-}
-
-let displayEvent = setTimeout(eventRand, eventTime);
-
-document.getElementById("maison").disabled = true;
-document.getElementById("appartement").disabled = true;
-document.getElementById("ville").disabled = true;
-document.getElementById("planète").disabled = true;
-
-
-document.getElementById("cookiesActif").innerHTML = "Cookies : " + score
 
 function disable() {    
+    document.getElementById("maison").disabled = true;
+    document.getElementById("appartement").disabled = true;
+    document.getElementById("ville").disabled = true;
+    document.getElementById("planète").disabled = true;
 
     if (score >= priceM){
         document.getElementById("maison").disabled = false;
@@ -112,6 +112,7 @@ function perSeconde(range){
     
 }
 
+let displayEvent = setTimeout(eventRand, eventTime);
 
 document.getElementById("clicks").addEventListener("click", () => { 
     score += valueClick;
@@ -128,10 +129,6 @@ document.getElementById("maison").addEventListener("click",()=>{
         document.getElementById("cookiesActif").innerHTML = "Cookies : " + score
         setInterval(perSeconde, 1000,fac1);
     }
-    else{
-        alert("insufficient sold")
-    }
-     
 });
 
 document.getElementById("appartement").addEventListener("click", () => { 
@@ -142,9 +139,6 @@ document.getElementById("appartement").addEventListener("click", () => {
         document.getElementById("cookiesActif").innerHTML = "Cookies : " + score
         setInterval(perSeconde, 1000, fac2);
     }
-    else{
-        alert("insufficient sold")
-    }   
 });
 
 document.getElementById("ville").addEventListener("click", () => { 
@@ -154,9 +148,6 @@ document.getElementById("ville").addEventListener("click", () => {
         priceV += (Math.floor(priceV/100*15))
         document.getElementById("cookiesActif").innerHTML = "Cookies : " + score
         setInterval(perSeconde, 1000, fac3);
-    }
-    else{
-        alert("insufficient sold")
     }
 });
 
@@ -168,42 +159,29 @@ document.getElementById("planète").addEventListener("click", () => {
         document.getElementById("cookiesActif").innerHTML = "Cookies : " + score
         setInterval(perSeconde, 1000, fac4);
     }
-    else{
-        alert("insufficient sold")
-    }
 });
 
-document.getElementById("").addEventListener("click",()=>{
+document.getElementById("galaxie").addEventListener("click",()=>{
     if (score >= price) {
         score -= price;
         valueClick += 1;
-        price += (Math.floor(priceM/100*15))
-    }
-    else{
-        alert("insufficient sold")
+        price += (Math.floor(price/100*15));
     }
 });
 
-document.getElementById("").addEventListener("click",()=>{
-    if (score >= price) {
-        score -= price;
+document.getElementById("billgates").addEventListener("click",()=>{
+    if (score >= priceBG) {
+        score -= priceBG;
         valueClick += 1;
-        price += (Math.floor(priceM/100*15))
-    }
-    else{
-        alert("insufficient sold")
+        priceBG += (Math.floor(priceM/100*15))
     }
 });
 
-document.getElementById("").addEventListener("click",()=>{
-    if (score >= price) {
-        score -= price;
+document.getElementById("elonmusk").addEventListener("click",()=>{
+    if (score >= priceEM) {
+        score -= priceEM;
         valueClick += 1;
-        price += (Math.floor(priceM/100*15))
+        priceEM += (Math.floor(priceM/100*15))
     }
-    else{
-        alert("insufficient sold")
-    }
-    
 });
 
