@@ -33,7 +33,7 @@ img.src = "https://nsa40.casimages.com/img/2021/02/24/210224113113164181.png";
 
 
 function eventRand() {
-
+img.disable = false
 img.src = "https://nsa40.casimages.com/img/2021/02/24/210224104508999300.png";
 
 document.getElementById("clicksbonus").addEventListener("click", () =>{
@@ -41,32 +41,23 @@ document.getElementById("clicksbonus").addEventListener("click", () =>{
 
 let event = ["x2", "+1000 habitants","+100 habitants", "+ 10% production habitant","maladie","x5 pendant une minute"];
 let eventSelec = Math.floor(Math.random()*event.length); 
-
+img.disable= true
 
 
 switch(eventSelec){
     case 0 : valueClick = valueClick*2;
-    alert("test")
     break;
 
     case 1 : score += 1000;
-    alert("test")
-
     break;
 
     case 2 : score += 100;
-    alert("test")
-    
     break;
 
     case 3 : valueClick = valueClick + (Math.floor((valueClick/100)*10));
-    alert("test")
-    
     break;
 
     case 4 : score = score - (Math.floor((valueClick/100)*10));
-    alert("test")
-    
     break;
 
     case 5 : fac1 = fac1*5;
@@ -83,13 +74,13 @@ switch(eventSelec){
              }, 600000)
     break;
     }
-    img.src = "https://nsa40.casimages.com/img/2021/02/24/210224113113164181.png";
 });
+    img.src = "https://nsa40.casimages.com/img/2021/02/24/210224113113164181.png";
     setTimeout(eventRand, Math.floor(Math.random()*(300000-60000)+60000))
     
 }
 
-
+img.disable = true
 
 
 function disable() {    
@@ -110,14 +101,14 @@ function disable() {
     if (score >= priceP){
         document.getElementById("planète").disabled = false;
     }
-    if (score >= priceK){
-        document.getElementById("KatyPerry").disabled = false;
+    if (score >= priceKP){
+        document.getElementById("katyperry").disabled = false;
     }
-    if (score >= priceB){
-        document.getElementById("BillGates").disabled = false;
+    if (score >= priceBG){
+        document.getElementById("billgates").disabled = false;
     }
-    if (score >= priceE){
-        document.getElementById("ElonMusk").disabled = false;
+    if (score >= priceEM){
+        document.getElementById("elonmusk").disabled = false;
     }
 }
 
@@ -179,11 +170,11 @@ document.getElementById("planète").addEventListener("click", () => {
     }
 });
 
-document.getElementById("galaxie").addEventListener("click",()=>{
-    if (score >= price) {
-        score -= price;
+document.getElementById("katyperry").addEventListener("click",()=>{
+    if (score >= priceKP) {
+        score -= priceKP;
         valueClick += 1;
-        price += (Math.floor(price/100*15));
+        priceKP += (Math.floor(price/100*15));
     }
 });
 
