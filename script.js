@@ -9,7 +9,7 @@ let priceP = 1000;
 let priceKP = 150;
 let priceBG = 300;
 let priceEM = 800;
-let eventTime = Math.floor(Math.random()*(300000-60000)-60000);
+let eventTime = Math.floor(Math.random()*(300000-60000)+60000);
 
 
 let fac1 = 0;
@@ -27,11 +27,22 @@ document.getElementById("elonmusk").disabled = true;
 
 
 document.getElementById("cookiesActif").innerHTML = "People : " + score
+let img = document.getElementById("clicksbonus");
+img.src = "https://nsa40.casimages.com/img/2021/02/24/210224113113164181.png";
+
+
 
 function eventRand() {
 
+img.src = "https://nsa40.casimages.com/img/2021/02/24/210224104508999300.png";
+
+document.getElementById("clicksbonus").addEventListener("click", () =>{
+
+
 let event = ["x2", "+1000 habitants","+100 habitants", "+ 10% production habitant","maladie","x5 pendant une minute"];
 let eventSelec = Math.floor(Math.random()*event.length); 
+
+
 
 switch(eventSelec){
     case 0 : valueClick = valueClick*2;
@@ -72,9 +83,13 @@ switch(eventSelec){
              }, 600000)
     break;
     }
-
-    setTimeout(eventRand, Math.floor(Math.random()*(300000-60000)-60000))
+    img.src = "https://nsa40.casimages.com/img/2021/02/24/210224113113164181.png";
+});
+    setTimeout(eventRand, Math.floor(Math.random()*(300000-60000)+60000))
+    
 }
+
+
 
 
 function disable() {    
