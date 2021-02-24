@@ -85,6 +85,10 @@ function perSeconde(range){
     document.getElementById("cookiesPerSec").innerHTML = "CPS : " + totalFac
 }
 
+if (score<100){
+    
+}
+
 
 document.getElementById("clicks").addEventListener("click", () => { 
     score += valueClick;
