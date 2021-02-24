@@ -23,7 +23,7 @@ document.getElementById("ville").disabled = true;
 document.getElementById("planète").disabled = true;
 
 
-document.getElementById("cookiesActif").innerHTML = "Cookies : " + score
+document.getElementById("cookiesActif").innerHTML = "People : " + score
 
 function eventRand() {
 
@@ -79,39 +79,6 @@ function disable() {
     document.getElementById("appartement").disabled = true;
     document.getElementById("ville").disabled = true;
     document.getElementById("planète").disabled = true;
-<<<<<<< HEAD
-=======
-}
-else{
-    document.getElementById("planète").disabled = false;
-}    
-
-    if(score<600){
-        document.getElementById("ville").disabled = true;
-
-    }    
-        if (score<400){
-            document.getElementById("appartement").disabled = true;
-
-        }
-            if (score<100){
-                document.getElementById("maison").disabled = true;
-            }
-            else{
-                document.getElementById("maison").disabled = false;
-            }*/
-//desactiver bouton boost clic
-
-
-document.getElementById("maison").disabled = true;
-
-
-
-
-
-
-document.getElementById("cookiesActif").innerHTML = "People : " + score
->>>>>>> dev
 
     if (score >= priceM){
         document.getElementById("maison").disabled = false;
@@ -138,32 +105,20 @@ document.getElementById("cookiesActif").innerHTML = "People : " + score
 
 function perSeconde(range){
     score += range;
-<<<<<<< HEAD
     let totalFac = fac1 + fac2 + fac3 + fac4;
-    document.getElementById("cookiesActif").innerHTML = "Cookies : " + score;
-    document.getElementById("cookiesPerSec").innerHTML = "CPS : " + totalFac;
+    document.getElementById("cookiesActif").innerHTML = "People : " + score;
+    document.getElementById("cookiesPerSec").innerHTML = "PPS : " + totalFac;
     disable()
     
-=======
-    let totalFac = fac1 + fac2 + fac3 + fac4
-    document.getElementById("cookiesActif").innerHTML = "People : " + score
-    document.getElementById("cookiesPerSec").innerHTML = "CPS : " + totalFac
->>>>>>> dev
 }
 
 let displayEvent = setTimeout(eventRand, eventTime);
 
 document.getElementById("clicks").addEventListener("click", () => { 
     score += valueClick;
-<<<<<<< HEAD
-    document.getElementById("cookiesActif").innerHTML = "Cookies : " + score
+    document.getElementById("cookiesActif").innerHTML = "People : " + score
     disable()
 })  
-=======
-    document.getElementById("cookiesActif").innerHTML = "People : " + score
-    console.log(score);
-})
->>>>>>> dev
 
 
 document.getElementById("maison").addEventListener("click",()=>{
