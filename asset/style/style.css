@@ -62,9 +62,9 @@ section img {
 }
 
 
-img[src="asset/img/spaceship.png"] {
-  display:none;
-}
+/* img[src="asset/img/spaceship.png"] { */
+  /* display:none; */
+/* } */
 
 
 
