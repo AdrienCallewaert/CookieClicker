@@ -1,11 +1,13 @@
 //idée -- ajout event guerre aléatoire une fois 2 planètes acquis -- ajout event invasion extraterreste
 
 let valueClick = 1;
-let score = 10000;
+let score = 0;
 let priceM = 100;
 let priceA = 400;
 let priceV = 600;
 let priceP = 1000;
+let priceKP = 150;
+let priceBG ;
 let eventTime = Math.floor(Math.random()*(300000-60000)-60000);
 
 
@@ -69,6 +71,33 @@ setTimeout(eventRand, Math.floor(Math.random()*(300000-60000)-60000))
 let displayEvent = setTimeout(eventRand, eventTime);
 
 
+
+//desactiver bouton boost cps
+/*if (score < 1000){
+    document.getElementById("planète").disabled = true;
+}
+else{
+    document.getElementById("planète").disabled = false;
+}    
+
+    if(score<600){
+        document.getElementById("ville").disabled = true;
+
+    }    
+        if (score<400){
+            document.getElementById("appartement").disabled = true;
+
+        }
+            if (score<100){
+                document.getElementById("maison").disabled = true;
+            }
+            else{
+                document.getElementById("maison").disabled = false;
+            }*/
+//desactiver bouton boost clic
+
+
+document.getElementById("maison").disabled = true;
 
 
 
@@ -177,5 +206,6 @@ document.getElementById("").addEventListener("click",()=>{
     else{
         alert("insufficient sold")
     }
+    
 });
 
