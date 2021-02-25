@@ -10,10 +10,6 @@ let priceBG = 300;
 let priceEM = 800;
 let eventTime = 10000;//Math.floor(Math.random()*(300000-60000)+60000);
 
-//declaration variables pour animation
-/*let moon = document.querySelector(".spaceship");
-let duration = moon.style.animationDuration;*/
-
 
 let fac1 = 0;
 let fac2 = 0;
@@ -38,21 +34,6 @@ let img = document.getElementById("clicksbonus");
 //function evenement aleatoire
 
 function eventRand() {
-    //animation lune
-   /* setTimeout(function(){
-    moon.classList.add('spaceship_animated');
-
-    let transition = "all "+ duration + "ms ease-in-out";
-
-    moon.style.webkitTransition = transition;
-    moon.style.MozTransition = transition;
-    moon.style.msTransition = transition;
-    moon.style.OTransition = transition;
-    moon.style.fransition = transition; 
-
- }); */
-
- document.getElementById('clicksbonus').classList.add('spaceship');
 
 document.getElementById("clicksbonus").addEventListener("click", () =>{
 
