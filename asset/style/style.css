@@ -182,9 +182,9 @@ h4 {
 }
 
 .appear{
-  -webkit-animation: spaceship 20s infinite;
-  -moz-animation: spaceship 20s infinite;
-  animation: spaceship 20s 1;
+  -webkit-animation: spaceship 10s infinite;
+  -moz-animation: spaceship 10s infinite;
+  animation: spaceship 10s 1;
 }
 
 @-webkit-keyframes spaceship {
