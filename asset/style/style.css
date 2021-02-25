@@ -155,6 +155,15 @@ button:active{
   #stat {
     height: 50vh;
   }
+  section {
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 
