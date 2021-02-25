@@ -35,8 +35,9 @@ let img = document.getElementById("clicksbonus");
 
 function eventRand() {
 
-document.getElementById("clicksbonus").addEventListener("click", () =>{
 
+document.getElementById("clicksbonus").addEventListener("click", () =>{
+document.getElementsByClassName("spaceship")[0].classList.add("appear");
 
 let event = ["people by clic x2", "+1000 people","+100 people", "+ 10% people production","pandemia","x5 for 1 minute"];
 let eventSelec = Math.floor(Math.random()*event.length);
@@ -87,11 +88,11 @@ switch(eventSelec){
     break;
     }
     document.getElementById("div1").style.visibility = "hidden";
-    setTimeout(eventRand, Math.floor(Math.random()*(300000-60000)+60000))
+    setTimeout(eventRand, eventTime)
 
 });
 
-    setTimeout(eventRand, Math.floor(Math.random()*(300000-60000)+60000))
+    setTimeout(eventRand, eventTime)
 }
 
 
