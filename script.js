@@ -38,21 +38,7 @@ let img = document.getElementById("clicksbonus");
 //function evenement aleatoire
 
 function eventRand() {
-    //animation lune
-   /* setTimeout(function(){
-    moon.classList.add('spaceship_animated');
 
-    let transition = "all "+ duration + "ms ease-in-out";
-
-    moon.style.webkitTransition = transition;
-    moon.style.MozTransition = transition;
-    moon.style.msTransition = transition;
-    moon.style.OTransition = transition;
-    moon.style.fransition = transition; 
-
- }); */
-
- document.getElementById('clicksbonus').classList.add('spaceship');
 
 document.getElementById("clicksbonus").addEventListener("click", () =>{
 
