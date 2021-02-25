@@ -193,23 +193,23 @@ document.getElementById("katyperry").addEventListener("click",()=>{
     if (score >= priceKP) {
         score -= priceKP;
         valueClick += 1;
-        priceKP += (Math.floor(price/100*15));
+        priceKP += (Math.floor(priceKP/100*15));
     }
 });
 
 document.getElementById("billgates").addEventListener("click",()=>{
     if (score >= priceBG) {
         score -= priceBG;
-        valueClick += 1;
-        priceBG += (Math.floor(priceM/100*15))
+        valueClick += 3;
+        priceBG += (Math.floor(priceBG/100*15))
     }
 });
 
 document.getElementById("elonmusk").addEventListener("click",()=>{
     if (score >= priceEM) {
         score -= priceEM;
-        valueClick += 1;
-        priceEM += (Math.floor(priceM/100*15))
+        valueClick += 5;
+        priceEM += (Math.floor(priceEM/100*15))
     }
 });
 
