@@ -100,6 +100,10 @@ function disable() {
     document.getElementById("appartement").disabled = true;
     document.getElementById("ville").disabled = true;
     document.getElementById("planète").disabled = true;
+    document.getElementById("katyperry").disabled = true;
+    document.getElementById("billgates").disabled = true;
+    document.getElementById("elonmusk").disabled = true;
+
 
     if (score >= priceM){
         document.getElementById("maison").disabled = false;
