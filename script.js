@@ -10,10 +10,6 @@ let priceBG = 300;
 let priceEM = 800;
 let eventTime = 10000;//Math.floor(Math.random()*(300000-60000)+60000);
 
-//declaration variables pour animation
-/*let moon = document.querySelector(".spaceship");
-let duration = moon.style.animationDuration;*/
-
 
 let fac1 = 0;
 let fac2 = 0;
@@ -38,7 +34,6 @@ let img = document.getElementById("clicksbonus");
 //function evenement aleatoire
 
 function eventRand() {
-
 
 document.getElementById("clicksbonus").addEventListener("click", () =>{
 
