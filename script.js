@@ -8,12 +8,11 @@ let priceP = 1000;
 let priceKP = 150;
 let priceBG = 300;
 let priceEM = 800;
-let eventTime = Math.floor(Math.random()*(300000-60000)+60000);
+let eventTime = 10000;//Math.floor(Math.random()*(300000-60000)+60000);
 
 //declaration variables pour animation
-let moon = document.querySelector(".spaceship");
-let start_time = moon.getAttribute("data-anim-start");
-let duration = moon.getAttribute("data-anim-duration");
+/*let moon = document.querySelector(".spaceship");
+let duration = moon.style.animationDuration;*/
 
 
 let fac1 = 0;
@@ -35,18 +34,15 @@ document.getElementById("elonmusk").disabled = true;
 
 document.getElementById("cookiesActif").innerHTML = "People : " + score
 let img = document.getElementById("clicksbonus");
-img.src = "https://nsa40.casimages.com/img/2021/02/24/210224113113164181.png";
-
 
 //function evenement aleatoire
 
 function eventRand() {
-
-//animation
- setTimeout(function(){
+    //animation lune
+   /* setTimeout(function(){
     moon.classList.add('spaceship_animated');
 
-    let transition = "all "+ duration + "ms esae-in-out";
+    let transition = "all "+ duration + "ms ease-in-out";
 
     moon.style.webkitTransition = transition;
     moon.style.MozTransition = transition;
@@ -54,8 +50,9 @@ function eventRand() {
     moon.style.OTransition = transition;
     moon.style.fransition = transition; 
 
- },start_time);
+ }); */
 
+ document.getElementById('clicksbonus').classList.add('spaceship');
 
 document.getElementById("clicksbonus").addEventListener("click", () =>{
 
