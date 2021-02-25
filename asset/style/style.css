@@ -194,7 +194,7 @@ h4 {
 }
 
 
-#spaceship {
+.spaceship {
   position: absolute;
   top: 250px;
   left: -999px;
