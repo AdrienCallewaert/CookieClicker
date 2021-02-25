@@ -201,9 +201,15 @@ h4 {
   left: -999px;
   width: 150px;
   height: 150px;
-  -webkit-animation: spaceship 20s infinite;
-  -moz-animation: spaceship 20s infinite;
-  animation: spaceship 20s 1;
+  -webkit-animation-name: spaceship;
+  -webkit-animation-duration: 20s;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-name: spaceship;
+  -moz-animation-duration: 20s;
+  -moz-animation-iteration-count: infinite;
+  animation-name: spaceship;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
 }
 
 
