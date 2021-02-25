@@ -114,18 +114,6 @@ button:active{
 }
 /* fonction bouton end */
 
-/* bonus */
-#div1 {
-  position: absolute;
-  top: 10px;
-  left: 30px;
-  text-align: center;
-	font-family: 'Sedgwick Ave', 'cursive';
-  margin-top: 10px;
-  font-size:3em;
-  color: darkgoldenrod;
-}
-
 /* Sur tous types d'écrans orientés verticalement */
 @media all and (orientation: portrait){
   button{
@@ -166,15 +154,6 @@ button:active{
   }
   #stat {
     height: 50vh;
-  }
-  #div1 {
-    position: absolute;
-    top:270px;
-    left: 2.5em;
-    font-family: 'Sedgwick Ave', 'cursive';
-    margin-top: 20px;
-    font-size:2em;
-    color: darkgoldenrod;
   }
 }
 
