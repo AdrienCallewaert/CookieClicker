@@ -24,9 +24,9 @@ document.addEventListener("mousemove" , parallax);
 
 
 // fonction pour masqué le bonus
-function displayokDiv1() {
+/*function displayokDiv1() {
             document.getElementById("div1").style.visibility = "hidden";
             }
-            setTimeout("displayokDiv1()", 30000); // aprés 30 sec
+            setTimeout("displayokDiv1()", 30000);*/ // aprés 30 sec
     
 
