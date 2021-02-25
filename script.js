@@ -1,5 +1,4 @@
-//idée -- ajout event guerre aléatoire une fois 2 planètes acquis -- ajout event invasion extraterreste
-
+//declaration des variables
 let valueClick = 1;
 let score = 0;
 let priceM = 100;
@@ -11,11 +10,18 @@ let priceBG = 300;
 let priceEM = 800;
 let eventTime = Math.floor(Math.random()*(300000-60000)+60000);
 
+//declaration variables pour animation
+let moon = document.querySelector(".spaceship");
+let start_time = moon.getAttribute("data-anim-start");
+let duration = moon.getAttribute("data-anim-duration");
+
 
 let fac1 = 0;
 let fac2 = 0;
 let fac3 = 0; 
 let fac4 = 0;
+
+//desactivation boutons multiplicateurs
 
 document.getElementById("maison").disabled = true;
 document.getElementById("appartement").disabled = true;
@@ -25,19 +31,34 @@ document.getElementById("katyperry").disabled = true;
 document.getElementById("billgates").disabled = true;
 document.getElementById("elonmusk").disabled = true;
 
+//initialisation fonction eventRand
 
 document.getElementById("cookiesActif").innerHTML = "People : " + score
 let img = document.getElementById("clicksbonus");
 img.src = "https://nsa40.casimages.com/img/2021/02/24/210224113113164181.png";
 
 
+//function evenement aleatoire
 
 function eventRand() {
 
-img.src = "https://nsa40.casimages.com/img/2021/02/24/210224104508999300.png";
+//animation
+ setTimeout(function(){
+    moon.classList.add('spaceship_animated');
+
+    let transition = "all "+ duration + "ms esae-in-out";
+
+    moon.style.webkitTransition = transition;
+    moon.style.MozTransition = transition;
+    moon.style.msTransition = transition;
+    moon.style.OTransition = transition;
+    moon.style.fransition = transition; 
+
+ },start_time);
+
 
 document.getElementById("clicksbonus").addEventListener("click", () =>{
-img.style.display = block;
+
 
 let event = ["people by clic x2", "+1000 people","+100 people", "+ 10% people production","pandemia","x5 for 1 minute"];
 let eventSelec = Math.floor(Math.random()*event.length);
@@ -87,18 +108,31 @@ switch(eventSelec){
              
     break;
     }
-    img.src = "https://nsa40.casimages.com/img/2021/02/24/210224113113164181.png";
     document.getElementById("div1").style.visibility = "hidden";
     setTimeout(eventRand, Math.floor(Math.random()*(300000-60000)+60000))
-    img.style.display = none;
+
 });
-    img.style.display = none;
-    img.src = "https://nsa40.casimages.com/img/2021/02/24/210224113113164181.png";
+
     setTimeout(eventRand, Math.floor(Math.random()*(300000-60000)+60000))
 }
 
 
 
+
+function perSeconde(range){
+    score += range;
+    let totalFac = fac1 + fac2 + fac3 + fac4;
+    document.getElementById("cookiesActif").innerHTML = "People : " + score;
+    document.getElementById("cookiesPerSec").innerHTML = "OFFspring: " + totalFac;
+    disable()
+    
+}
+
+
+let displayEvent = setTimeout(eventRand, 10000);
+
+
+//gestion des boutons multiplicateurs
 
 function disable() {    
     document.getElementById("maison").disabled = true;
@@ -128,19 +162,6 @@ function disable() {
         document.getElementById("elonmusk").disabled = false;
     }
 }
-
-function perSeconde(range){
-    score += range;
-    let totalFac = fac1 + fac2 + fac3 + fac4;
-    document.getElementById("cookiesActif").innerHTML = "People : " + score;
-    document.getElementById("cookiesPerSec").innerHTML = "OFFspring: " + totalFac;
-    disable()
-    
-}
-
-img.style.display= none;
-
-let displayEvent = setTimeout(eventRand, 10000);
 
 document.getElementById("clicks").addEventListener("click", () => { 
     score += valueClick;
