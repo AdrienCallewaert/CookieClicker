@@ -44,52 +44,34 @@ let eventSelec = Math.floor(Math.random()*event.length);
 
 switch(eventSelec){
     case 0 : valueClick = valueClick*2;
-    document.getElementById("div1").style.visibility = "visible";
-    document.getElementById("div1").innerHTML = "Activated bonus : "+ event[eventSelec];
     break;
 
     case 1 : score += 1000;
-    document.getElementById("div1").style.visibility = "visible";
-    document.getElementById("div1").innerHTML = "Activated bonus : "+ event[eventSelec];
-
     break;
 
     case 2 : score += 100;
-    document.getElementById("div1").style.visibility = "visible";
-    document.getElementById("div1").innerHTML = "Activated bonus : "+ event[eventSelec];
-    
     break;
 
     case 3 : valueClick = valueClick + (Math.floor((valueClick/100)*10));
-    document.getElementById("div1").style.visibility = "visible";
-    document.getElementById("div1").innerHTML = "Activated bonus : "+ event[eventSelec];
-    
     break;
 
     case 4 : score = score - (Math.floor((valueClick/100)*10));
-    document.getElementById("div1").style.visibility = "visible";
-    document.getElementById("div1").innerHTML = "Activated bonus : "+ event[eventSelec];
     break;
 
     case 5 : fac1 = fac1*5;
              fac2 = fac2*5;
              fac3 = fac3*5;
              fac4 = fac4*5;
-             document.getElementById("div1").style.visibility = "visible";
-             document.getElementById("div1").innerHTML = "Activated bonus : "+ event[eventSelec];
              setTimeout(() => {
                 fac1 = fac1/5;
                 fac2 = fac2/5;
                 fac3 = fac3/5;
                 fac4 = fac4/5;
-                document.getElementById("div1").style.visibility = "hidden";
              }, 600000)
              
     break;
     }
-    document.getElementById("div1").style.visibility = "hidden";
     setTimeout(eventRand, Math.floor(Math.random()*(300000-60000)+60000))
-
 });
 
     setTimeout(eventRand, Math.floor(Math.random()*(300000-60000)+60000))
